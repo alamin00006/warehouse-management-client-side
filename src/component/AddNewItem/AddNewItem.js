@@ -1,13 +1,18 @@
-import React from 'react';
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddNewItem = () => {
+    const [user] = useAuthState(auth);
+   
  const handleNewUser = (event) =>{
      event.preventDefault();
      const name = event.target.name.value;
      const email = event.target.email.value;
      const picture = event.target.picture.value;
+     const userEmail = user.email;
 
-     const newItem = {name, email, picture};
+     const newItem = {name, email, picture,userEmail};
     const url = 'http://localhost:5000/computers/';
      fetch(url , {
         method: "POST",
@@ -17,6 +22,7 @@ const AddNewItem = () => {
         body:JSON.stringify(newItem)
       }).then(res => res.json())
         .then(data => {
+        
             event.target.reset()
         })
  }
@@ -29,8 +35,8 @@ const AddNewItem = () => {
                 <input type="text" name="picture" id="" />
                 <br />
                 <input type="submit" value="Add New Item" />
-
-            </form>
+                </form>
+           
         </div>
     );
 };

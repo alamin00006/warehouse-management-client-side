@@ -8,7 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+   
+    const [signInWithGoogle, googleUser,googleError] = useSignInWithGoogle(auth);
     
 
     const [
@@ -38,7 +39,7 @@ const Login = () => {
         if(user){
           navigate(from, { replace: true })
       }
-      },[user])
+      },[user, googleUser])
   
           const emailCheck = (e) =>{
           const emailRegex = /\S+@\S+\.\S+/;
@@ -94,7 +95,7 @@ const Login = () => {
             {error?.passWordError&& <p className='text-danger'>{error.passWordError}</p>}
                  <p></p>
            <input className='bg-info border-0 py-2 mt-2 fs-5' type="submit" value="Login" />
-           <p>No Account<Link to = "/signin">Please Register
+           <p>No Account<Link to = "/signUp">Please Register
            </Link></p>
            
            <ToastContainer/>

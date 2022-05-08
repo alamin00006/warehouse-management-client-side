@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Computer.css'
 
 const Computer = (props) => {
- const{_id, name, description, picture, quantiy, price, suppliyerName} = props.computer;
+ const{_id, name, description, picture, quantiy, price, suppliyerName} = props?.computer;
  const navigate = useNavigate()
  const handleUpdate  = (id) =>{
  navigate(`/productDetals/${id}`)

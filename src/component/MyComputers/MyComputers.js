@@ -2,20 +2,20 @@
 import { Link } from 'react-router-dom';
 import useProduct from '../../hooks/useProduct/useProduct';
 import Computer from './Computer/Computer';
-
+import './MyComputers.css'
 const MyComputers = () => {
 const [myComputers] = useProduct();
 
- console.log(myComputers)
+
 
 
     return (
-        <div id='MyComputers'>
+        <div id='MyComputers' className='computers'>
             <h1 className='text-center'>My Computers{myComputers?.length}</h1>
             {
                 myComputers?.slice(0, 6).map(computer => <Computer key={computer._id} computer = {computer}></Computer>)
             }
-             <Link to = "manageProduct">Manage Products</Link>   
+             <Link className='text-center' to = "manageProduct">Manage Products</Link>   
         </div>
     );
 };

@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Navber from '../Navber/Navber';
 
+import Banner from '../Banner/Banner';
+import MyComputers from '../MyComputers/MyComputers';
 const Home = () => {
     return (
         <div>
-            <Navber></Navber>
-            
+           
+           <Banner></Banner>
+           <MyComputers></MyComputers>
 
-            <Link to ='/manageProduct'>Manage Products</Link>
+            {/* <Link className='text-center' to ='/manageProduct'>Manage Products</Link> */}
         </div>
     );
 };
