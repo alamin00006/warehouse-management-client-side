@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../Loading/Loading';
 
 const SignUp = () => {
-
-
+  
   const [userInfo, setUserInfo] = useState({
       email: "",
       password : '',
@@ -19,6 +19,9 @@ const SignUp = () => {
       passWordError: ""
   })
 
+
+
+  
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
     const [
@@ -77,6 +80,11 @@ const SignUp = () => {
             setUserInfo({...userInfo, confirmPass:"" })
            }
      }
+     const [Loadinguser, Userloading] = useAuthState(auth);
+     if(Userloading){
+       return <Loading></Loading> ;  
+     }
+ 
         
     
 
