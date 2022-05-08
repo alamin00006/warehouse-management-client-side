@@ -1,7 +1,10 @@
 .product-container{
     border: 1px solid lightgrey;
-    width: 100%;
+    width: 500px;
     margin-bottom: 10px;
     height: 300px;
     border-radius: 20px;
+}
+.product-container img{
+    width: 300px;
 }

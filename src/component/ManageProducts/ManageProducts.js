@@ -11,7 +11,7 @@ const ManageProducts = () => {
     const handleDelete = (id) =>{
         const confirm = window.confirm('Are you Sure Delete me?');
         if(confirm){
-            const url = `http://localhost:5000/computer/${id}`;
+            const url = `http://localhost:5000/computers/${id}`;
             fetch(url , {
                 method: "DELETE",
               }).then(res => res.json())
@@ -36,7 +36,7 @@ const ManageProducts = () => {
                   </Card.Text>
                  
                 </Card.Body>
-                <button onClick={ () =>handleDelete(computer._id)}>delete me</button>
+                <button className="btn btn-danger" onClick={ () =>handleDelete(computer._id)}>delete me</button>
               </Card>
               
               )

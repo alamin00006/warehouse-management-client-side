@@ -6,7 +6,7 @@ import Blogs from './component/Blogs/Blogs';
 import Header from './component/Header/Header';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
-import ManageItems from './component/ManageItems/ManageItems';
+
 import ManageProducts from './component/ManageProducts/ManageProducts';
 import MyItems from './component/MyItems/MyItems';
 
@@ -22,7 +22,7 @@ function App() {
      <Routes>
        <Route path='/' element={<Home></Home>}></Route>
     
-    <Route path='/productDetals/:productId' element= {<RequireAuth><ProductDetails></ProductDetails></RequireAuth>}></Route>
+    <Route path='/computers/:productId' element= {<RequireAuth><ProductDetails></ProductDetails></RequireAuth>}></Route>
     <Route path='/manageProduct' element ={<ManageProducts></ManageProducts>}></Route>
     <Route path='/newItem' element= {<AddNewItem></AddNewItem>}></Route>
     <Route path='/login' element={<Login></Login>}></Route>

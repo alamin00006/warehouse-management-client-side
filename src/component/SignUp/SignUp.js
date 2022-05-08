@@ -104,14 +104,14 @@ const SignUp = () => {
             <label htmlFor="password">Confirm Password</label>
             <input onChange={confirmPasswordCheck} className='d-block mt-2' type="password" placeholder='Enter Your Password' name="confirmPassword" id="password" />
             <p></p>
-           <input className='bg-info border-0 py-2 mt-2 fs-5' type="submit" value="Register" />
+           <input className='bg-warning border-0 py-2 mt-2 fs-5' type="submit" value="Register" />
            <p>Already have a Account<Link to = "/login">Please Login
            </Link></p>
            
            <ToastContainer/>
        </div>
         </form>
-        <button onClick={()=>signInWithGoogle()} className='btn btn-primary google-signIn'>Google SignIn</button>
+        <button onClick={()=>signInWithGoogle()} className='btn btn-info google-signIn'>Google SignIn</button>
     </div>
     
     );

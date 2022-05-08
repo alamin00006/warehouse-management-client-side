@@ -94,7 +94,7 @@ const Login = () => {
             <input onChange={passwordCheck} className='d-block mt-2' type="password" placeholder='Enter Your Password' name="password" id="password" />
             {error?.passWordError&& <p className='text-danger'>{error.passWordError}</p>}
                  <p></p>
-           <input className='bg-info border-0 py-2 mt-2 fs-5' type="submit" value="Login" />
+           <input className='bg-warning border-0 py-2 mt-2 fs-5' type="submit" value="Login" />
            <p>No Account<Link to = "/signUp">Please Register
            </Link></p>
            
@@ -102,7 +102,7 @@ const Login = () => {
             </div>
           
         </form>
-        <button onClick={()=>signInWithGoogle()} className='btn btn-primary google-signIn'>Google SignIn</button>
+        <button onClick={()=>signInWithGoogle()} className='btn btn-info google-signIn'>Google SignIn</button>
             </div>
             <div>
             <button className='btn btn-danger reset-button'

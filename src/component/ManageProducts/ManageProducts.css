@@ -2,3 +2,10 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+.my-card a{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+   
+
+}
