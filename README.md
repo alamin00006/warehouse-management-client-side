@@ -1,6 +1,17 @@
 # Getting Started with Create React App
+## My Site Name : Computers-Stock-manage
+My Live Site Link [My Live Site](https://my-computer-store-9e4ae.web.app/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## this site Description: 
+This is a inventory management site,
+this site is Computer stock management site
+this site in full authentication setup
+
+* This site in computer stock.
+* This site in computer stock quantity manage.
+* This site in added new porduct.
+* This site in have a blog, in blog 3 question ans.
+* This site in full authentication setup.
 
 ## Available Scripts
 
