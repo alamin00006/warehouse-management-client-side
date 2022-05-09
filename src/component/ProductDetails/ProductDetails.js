@@ -11,7 +11,7 @@ const ProductDetails = () => {
 
 // console.log(oneComputer);
  useEffect( () =>{
-     const url = `http://localhost:5000/computers/${productId}`;
+     const url = `https://dry-mountain-03904.herokuapp.com/computers/${productId}`;
      fetch(url)
      .then(res =>res.json())
      .then(data =>setOneComputer(data))
@@ -22,7 +22,7 @@ const handleNewQuantity = (event) =>{
   event.preventDefault();
   const quantity = parseInt(event.target.quantity.value)+ parseInt(oneComputer.quantity);
   const newQuantity = {quantity};
-  const url = `http://localhost:5000/computers/${productId}`;
+  const url = `https://dry-mountain-03904.herokuapp.com/computers/${productId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -33,8 +33,8 @@ const handleNewQuantity = (event) =>{
         .then(res => res.json())
         .then(data =>{
             console.log('success', data);
-            // alert('users added successfully!!!');
            setReload(!reload)
+           event.target.reset()
         })
 }
 
@@ -47,7 +47,7 @@ const handleNewQuantity = (event) =>{
   console.log(quantity)
  
   const updateQuantity = {quantity}
-  const url = `http://localhost:5000/computers/${productId}`;
+  const url = `https://dry-mountain-03904.herokuapp.com/computers/${productId}`;
         fetch(url, {
             method: 'PUT',
             headers: {

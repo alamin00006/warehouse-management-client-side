@@ -11,7 +11,7 @@ const ManageProducts = () => {
     const handleDelete = (id) =>{
         const confirm = window.confirm('Are you Sure Delete me?');
         if(confirm){
-            const url = `http://localhost:5000/computers/${id}`;
+            const url = `https://dry-mountain-03904.herokuapp.com/computers/${id}`;
             fetch(url , {
                 method: "DELETE",
               }).then(res => res.json())

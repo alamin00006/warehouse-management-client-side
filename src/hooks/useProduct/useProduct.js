@@ -4,7 +4,7 @@ const useProduct = () =>{
     const [myComputers, setMyComputers] = useState([]);
 
 useEffect(() =>{
-    const url = "http://localhost:5000/computers";
+    const url = "https://dry-mountain-03904.herokuapp.com/computers";
     fetch(url)
     .then(res =>res.json())
     .then(data => setMyComputers(data));

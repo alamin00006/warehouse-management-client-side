@@ -16,7 +16,7 @@ const [myComputers] = useProduct();
             }
             </div>
             <div>
-            <Link className='text-center' to = "manageProduct">Manage Products</Link>
+            <Link className='text-center btn btn-warning' to = "manageProduct">Manage Products</Link>
                 </div>   
         </div>
     );

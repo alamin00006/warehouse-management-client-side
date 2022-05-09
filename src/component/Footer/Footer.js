@@ -17,7 +17,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className='col-lg-4 col-sm-12'>
-            <h3>Public Relation</h3>
+            <h3>Other Products</h3>
             <ul>
                 
             </ul>

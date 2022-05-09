@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import './MyItems.css'
 
 const MyItems = () => {
     const [user] = useAuthState(auth)
@@ -12,7 +13,7 @@ const MyItems = () => {
     const handleDelete = (id) =>{
         const confirm = window.confirm('Are you Sure Delete me?');
         if(confirm){
-            const url = `http://localhost:5000/computers/${id}`;
+            const url = `https://dry-mountain-03904.herokuapp.com/computers/${id}`;
             fetch(url , {
                 method: "DELETE",
               }).then(res => res.json())
@@ -30,7 +31,7 @@ const MyItems = () => {
         async function  findEmail(){
             const email = user?.email;
         console.log(email)
-        const url = `http://localhost:5000/computers?email=${email}`;
+        const url = `https://dry-mountain-03904.herokuapp.com/computers?email=${email}`;
        await fetch(url)
         .then(res =>res.json())
         .then(data => setMyItems(data));
@@ -41,7 +42,8 @@ const MyItems = () => {
 
      return (
         <div>
-            <h1>this my items{myItems.length}</h1>
+            <h1>This my items{myItems.length}</h1>
+            <div className='myItems'>
             {myItems.map(computer => <Card key={computer._id} style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={computer.picture} />
                 <Card.Body>
@@ -55,6 +57,7 @@ const MyItems = () => {
               </Card>
               
               )}
+            </div>
         </div>
     );
 };

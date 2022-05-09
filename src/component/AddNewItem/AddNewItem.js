@@ -22,7 +22,7 @@ const AddNewItem = () => {
      const userEmail = user.email;
 
      const newItem = {name, suppliyerName, picture,userEmail,description,quantity,price};
-    const url = 'http://localhost:5000/computers/';
+    const url = 'https://dry-mountain-03904.herokuapp.com/computers/';
      fetch(url , {
         method: "POST",
         headers:{

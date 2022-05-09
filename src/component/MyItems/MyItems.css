@@ -1,0 +1,12 @@
+.myItems{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 576px) {
+    .myItems{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+   
+}

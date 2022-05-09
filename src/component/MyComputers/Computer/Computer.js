@@ -20,7 +20,7 @@ const Computer = (props) => {
 
     return (
         <div className='container product-container
-        col-lg-4 col-sm-12 '>
+        col-lg-4 col-sm-12'>
             <div>
             <h4>Product Name : {name}</h4>
             <img src={picture} alt="" />

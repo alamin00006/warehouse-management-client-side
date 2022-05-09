@@ -20,7 +20,7 @@ const Navber = () => {
     <Nav className="me-auto">
     </Nav>
     <Nav>
-      <Nav.Link href="#computers">My Computers</Nav.Link>
+      <Nav.Link href="home#computers">My Computers</Nav.Link>
      
       <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
       
