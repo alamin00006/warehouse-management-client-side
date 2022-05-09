@@ -19,9 +19,9 @@ const Computer = (props) => {
 
 
     return (
-        <div className='container product-container
-        col-lg-4 col-sm-12'>
-            <div>
+        <div className='container
+        col-lg-4 col-sm-12  '>
+            <div className='product-container'>
             <h4>Product Name : {name}</h4>
             <img src={picture} alt="" />
             <p> Descripiton{description}</p>

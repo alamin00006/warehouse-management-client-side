@@ -19,9 +19,9 @@ const AddNewItem = () => {
      const quantity = parseInt(quantitys)
 
      const price = event.target.price.value;
-     const userEmail = user.email;
+     const email = user.email;
 
-     const newItem = {name, suppliyerName, picture,userEmail,description,quantity,price};
+     const newItem = {name, suppliyerName, picture,email,description,quantity,price};
     const url = 'https://dry-mountain-03904.herokuapp.com/computers/';
      fetch(url , {
         method: "POST",

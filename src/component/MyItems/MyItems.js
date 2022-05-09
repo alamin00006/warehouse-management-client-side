@@ -8,6 +8,7 @@ import './MyItems.css'
 const MyItems = () => {
     const [user] = useAuthState(auth)
     const [myItems, setMyItems] = useState([]);
+   
     
 
     const handleDelete = (id) =>{
@@ -25,24 +26,27 @@ const MyItems = () => {
                 })
              }
         }
-
+      
 
     useEffect(() =>{
         async function  findEmail(){
             const email = user?.email;
-        console.log(email)
-        const url = `https://dry-mountain-03904.herokuapp.com/computers?email=${email}`;
+             const url = `https://dry-mountain-03904.herokuapp.com/computers?email=${email}`;
+             console.log(url)
        await fetch(url)
         .then(res =>res.json())
         .then(data => setMyItems(data));
         }
         findEmail()
-    },[user?.email])
+    },[user])
 
 
      return (
         <div>
             <h1>This my items{myItems.length}</h1>
+
+           
+            
             <div className='myItems'>
             {myItems.map(computer => <Card key={computer._id} style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={computer.picture} />

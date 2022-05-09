@@ -10,7 +10,7 @@ const [myComputers] = useProduct();
     return (
         <div id='computers' className='computers'>
             <h1 className='text-center'>My Computers :{myComputers?.length}</h1>
-            <div className='row gy-3'>
+            <div className='row'>
             {
                 myComputers?.slice(0, 6).map(computer => <Computer key={computer._id} computer = {computer}></Computer>)
             }
