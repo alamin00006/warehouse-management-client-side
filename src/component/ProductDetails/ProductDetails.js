@@ -79,7 +79,7 @@ const handleNewQuantity = (event) =>{
           <form onSubmit={handleNewQuantity}>
           <input type="number" name = "quantity"  />
            <br />
-           <input type="submit" value="newQuantity" />
+           <input className='btn btn-primary' type="submit" value="newQuantity" />
           </form>
            
            <button className='btn btn-warning' onClick={deliverdHandle}>Deliverd</button>

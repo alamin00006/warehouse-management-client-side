@@ -56,7 +56,7 @@ const AddNewItem = () => {
                 <br />
                 <input type="text" name="price" placeholder='price' id="" />
                 <br />
-                <input type="submit" value="Add New Item" />
+                <input className='btn btn-primary' type="submit" value="Add New Item" />
                 </form>
            
         </div>
